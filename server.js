@@ -1,14 +1,17 @@
 const express = require('express');
-const app = express();
 const path = require('path');
+const app = express();
 const port = 3000;
 
-// Define o diretório público para servir arquivos estáticos
-app.use(express.static(path.join(__dirname, 'public')));
+// Define o diretório público para servir arquivos estáticos (se necessário)
+// app.use(express.static(path.join(__dirname, 'public')));
+
+// Rota para servir o aplicativo React compilado
+app.use(express.static(path.join(__dirname, 'meu-projeto/build')));
 
 // Rota para a página inicial
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'meu-projeto/build', 'index.html'));
 });
 
 // Inicia o servidor
