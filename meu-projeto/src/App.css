@@ -2,22 +2,60 @@
   text-align: center;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0; /* Cor de fundo agradável */
+  background-color: #333333; /* Cor de fundo escura */
 }
 
 .App-header {
-  background-color: #ffffff; /* Cor de fundo do cabeçalho */
+  background-color: transparent; /* Cor de fundo do cabeçalho com opacidade */
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Efeito de sombra */
+  box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.3); /* Efeito de sombra com opacidade */
+  transition: all 0.3s ease; /* Transição suave */
+}
+
+.App-header:hover {
+  transform: scale(1.05); /* Efeito de escala ao passar o mouse */
 }
 
 h1 {
-  color: #333333; /* Cor do texto do título */
+  color: #ffffff; /* Cor do texto do título */
 }
 
 p {
-  color: #666666; /* Cor do texto do parágrafo */
+  color: #cccccc; /* Cor do texto do parágrafo */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Espaçamento entre a apresentação e os botões */
+}
+
+.icon {
+  width: 20px; /* Ajusta o tamanho do ícone */
+  height: 20px; /* Ajusta o tamanho do ícone */
+  margin-right: 5px; /* Adiciona um espaço à direita do ícone */
+}
+
+
+.github-button,
+.linkedin-button {
+  background-color: transparent;
+  border: none; /* Removendo as bordas */
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  margin: 0 10px; /* Espaçamento entre os botões */
+}
+
+.github-button:hover,
+.linkedin-button:hover {
+  background-color: #ffffff;
+  color: #333333;
 }
