@@ -9,19 +9,17 @@
 }
 
 .App-header {
-  background-color: transparent; /* Cor de fundo do cabeçalho com opacidade */
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.3); /* Efeito de sombra com opacidade */
-  transition: all 0.3s ease; /* Transição suave */
 }
 
-.App-header:hover {
-  transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+.big-name {
+  font-size: 48px; /* Tamanho grande do nome Tássio */
+  color: #ffffff; /* Cor do texto */
+  margin-bottom: 5px; /* Espaçamento inferior */
 }
 
-h1 {
-  color: #ffffff; /* Cor do texto do título */
+.last-name {
+  color: #cccccc; /* Cor do sobrenome */
 }
 
 p {

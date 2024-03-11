@@ -16,7 +16,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Tássio Carvalho Rodrigues</h1>
+        <h1 className="big-name">Tássio Carvalho Rodrigues</h1>
+        <h2 className="last-name"></h2>
         <p>Esta é uma página inicial de apresentação usando React.</p>
       </header>
       <div className="button-container">
