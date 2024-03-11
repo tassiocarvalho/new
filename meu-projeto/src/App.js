@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './App.css';
 import githubIcon from './github-icon.png'; // Importa o ícone do GitHub
 import linkedinIcon from './linkedin-icon.png'; // Importa o ícone do LinkedIn
+import copyIcon from './copy-icon.png'; // Importa o ícone de copiar
 
 function App() {
+  const emailRef = useRef(null);
+
+  const handleCopyEmail = () => {
+    emailRef.current.select();
+    document.execCommand('copy');
+    alert('Email copiado para a área de transferência!');
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,9 +27,15 @@ function App() {
         </a>
         <a href="https://www.linkedin.com/in/tassio-carvalho-a5315121a/" target="_blank" rel="noopener noreferrer">
           <button className="linkedin-button">
-            <img src={linkedinIcon} alt="Ícone do LinkedIn" className="icon" /> LinkedIn
+            <img src={linkedinIcon} alt="Ícone do LinkedIn" className="icon" /> LinkedIn Autor
           </button>
         </a>
+      </div>
+      <div className="email-container">
+        <input type="text" value="tassiocarvalhor@gmail.com" readOnly ref={emailRef} className="email-input" />
+        <button onClick={handleCopyEmail} className="copy-button">
+          <img src={copyIcon} alt="Ícone de copiar" className="icon" />
+        </button>
       </div>
     </div>
   );
